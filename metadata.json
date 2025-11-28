@@ -1,0 +1,7 @@
+{
+  "name": "RealFace Aesthetica | 联合丽格西南中心趣味面部美学评估",
+  "description": "重庆联合丽格 - 趣味面部美学分析与报告生成器",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

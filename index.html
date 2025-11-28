@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Elements -->
+    <title>你的颜，仙不仙？ | 趣味面部美学</title>
+    <meta name="description" content="专业AI面部美学分析系统，提供基于黄金比例、面部对称性和五官形态的医疗级美学评估报告。重庆联合丽格科技有限公司出品。" />
+    <meta name="keywords" content="AI测脸, 面部美学分析, 黄金比例, 医美面诊, 重庆联合丽格, 颜值打分" />
+    <meta name="author" content="重庆联合丽格科技有限公司" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://docs.bccsw.cn/favicon.png" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Primary Palette - Neutral & Elegant
+              'sys-bg': '#FAF9F6',         // Off-white/Alabaster
+              'sys-surface': '#FFFFFF',    // Pure White
+              'sys-text-main': '#4A4A4A',  // Dark Grey (Softer than black)
+              'sys-text-light': '#8C8C8C', // Light Grey
+              
+              // Accent Palette - Warm & Soft
+              'brand-rose': '#B08D87',     // Muted Rose Gold
+              'brand-gold': '#C5A065',     // Champagne Gold
+              'brand-accent': '#E8D5D2',   // Pale Pinkish Beige
+              
+              // Secondary/Cool Accents
+              'mint-mist': '#E0ECE9',      // Very light mint
+              'lavender-mist': '#E9E4ED',  // Very light lavender
+            },
+            fontFamily: {
+              sans: ['"Noto Sans SC"', 'Helvetica Neue', 'Arial', 'sans-serif'],
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            },
+            letterSpacing: {
+              'widest-custom': '0.15em',
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'glow': '0 0 15px rgba(176, 141, 135, 0.2)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'scale-up': 'scaleUp 0.4s ease-out forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'morph': 'morph 8s ease-in-out infinite',
+              'scroll-up': 'scrollUp 60s linear infinite',
+              'scroll-down': 'scrollDown 60s linear infinite',
+              'glitch': 'glitch 1s linear infinite',
+              'typewriter': 'typewriter 2s steps(40) forwards',
+              'blur-in': 'blurIn 1s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'zoom-fade': 'zoomFade 4s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleUp: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              morph: {
+                '0%, 100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+                '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
+              },
+              scrollUp: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' },
+              },
+              scrollDown: {
+                '0%': { transform: 'translateY(-50%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              glitch: {
+                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' },
+              },
+              typewriter: {
+                'from': { width: '0' },
+                'to': { width: '100%' },
+              },
+              blurIn: {
+                '0%': { opacity: '0', filter: 'blur(20px)', transform: 'scale(1.1)' },
+                '100%': { opacity: '1', filter: 'blur(0)', transform: 'scale(1)' },
+              },
+              slideInLeft: {
+                '0%': { transform: 'translateX(-100px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              zoomFade: {
+                '0%': { opacity: '0', transform: 'scale(1.1)' },
+                '10%': { opacity: '1' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "qrcode.react": "https://esm.sh/qrcode.react@3.1.0?external=react",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-sys-bg text-sys-text-main antialiased font-light selection:bg-brand-rose selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
